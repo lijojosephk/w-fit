@@ -97,12 +97,25 @@ jQuery(document).ready(function ($) {
                     centeredSlidesMobileVal = false;
                 }
 
+                var loopVal = $(this).attr('data-loop');
+                if (loopVal === 'true') {
+                    loopVal = true;
+                } else {
+                    loopVal = false;
+                }
+
+                var loopMobileVal = $(this).attr('data-loopMobile');
+                if (loopMobileVal === 'true') {
+                    loopMobileVal = true;
+                } else {
+                    loopMobileVal = false;
+                }
+
                 var slider = new Swiper('.s' + index, {
                     slidesPerView: $(this).attr('data-slidesPerView'),
                     spaceBetween: parseInt($(this).attr('data-spaceBetween'), 10),
-                    loop: $(this).attr('data-loop'),
+                    loop: loopVal,
                     centeredSlides: centeredSlidesVal,
-                    
                     // If we need pagination
                     pagination: {
                         el: '.swiper-pagination',
@@ -122,21 +135,25 @@ jQuery(document).ready(function ($) {
                         320: {
                             slidesPerView: $(this).attr('data-slidesPerView320'),
                             centeredSlides: centeredSlidesMobileVal,
+                            loop: loopMobileVal,
                         },
                         // when window width is <= 480px
                         480: {
                             slidesPerView: $(this).attr('data-slidesPerView480'),
                             centeredSlides: centeredSlidesMobileVal,
+                            loop: loopMobileVal,
                         },
                         // when window width is <= 640px
                         640: {
                             slidesPerView: $(this).attr('data-slidesPerView640'),
                             centeredSlides: centeredSlidesMobileVal,
+                            loop: loopMobileVal,
                         },
                         // when window width is <= 991px
                         991: {
                             slidesPerView: $(this).attr('data-slidesPerView991'),
                             centeredSlides: centeredSlidesMobileVal,
+                            loop: loopMobileVal,
                         }
                     }
                 });
