@@ -1,0 +1,22 @@
+.offer-top-ribbon {
+    background: $color_skyblue;
+    position: fixed;
+    top: -10%;
+    left: 0;
+    z-index: 99;
+    width: 100vw;
+    padding: 15px 0;
+    text-align: center;
+    @extend %transition300;
+
+    &--text {
+        font-size: 11px;
+        line-height: 18px;
+        color: #EFF0FF;
+
+        span {
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+    }
+}
