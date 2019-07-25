@@ -1,0 +1,107 @@
+.know-measure-size-popup {
+    height: 85vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: -100%;
+    z-index: 102;
+    background: #8AB8DE;
+    padding-top: 55px;
+    padding-bottom: 35px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    &.active {
+        right: 0;
+        opacity:1;
+        // transition: opacity 0.4s ease 1s;
+    }
+
+    &--title {
+        font-size: 26px;
+        line-height: 33px;
+        color: $color_white;
+    }
+
+    &--sub-title {
+        font-size: 12px;
+        line-height: 19px;
+        margin-top: 5px;
+        color: $color_white;
+    }
+
+    &--close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 14px 20px;
+
+        &__icon {
+            color: $color_white;
+        }
+    }
+
+    &--carousel {
+        // padding-bottom: 150px;
+
+        .swiper-slide {
+            p {
+                position: absolute;
+                bottom: 83px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 18px;
+                color: $color_white;
+            }
+        }
+
+        .swiper-pagination {
+            bottom: 50px;
+            span {
+                width: 25px;
+                height: 1px;
+                background: rgba(0,0,0,0.8);
+            }
+            span.swiper-pagination-bullet-active {
+                background: rgba(255,255,255,1);
+            }
+        }
+        .swiper-button-prev {
+            position: absolute;
+            left: 100px;
+            right: unset;
+            bottom: 70px;
+            top: unset;
+            margin-top: 0px;
+            width: 50px;
+            height: 50px;
+            background: url(../../images/know-measeure-size-popup/prev-button.png) center center no-repeat;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 1111;
+        }
+
+        .swiper-button-next {
+            position: absolute;
+            left: unset;
+            right: 100px;
+            bottom: 70px;
+            top: unset;
+            margin-top: 0px;
+            width: 50px;
+            height: 50px;
+            background: url(../../images/know-measeure-size-popup/next-button.png) center center no-repeat;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 1111;
+        }
+
+    }
+
+    // display: none;
+
+}

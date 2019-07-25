@@ -1,0 +1,19 @@
+.sleep-score-calculator-popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+    right:25px;
+    z-index: 102;
+    &--close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 13px 19px;
+
+        &__icon {
+            color: $color_black;
+        }
+    }
+}
