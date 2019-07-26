@@ -7,13 +7,13 @@ jQuery(document).ready(function ($) {
             $('.order-summary-show-hide-trigger').on('click', function () {
                 $(this).toggleClass('opened');
                 if($(this).hasClass('opened')){
-                    $(this).find('.checkout--order-summary__title').text('Hide Order Summary');
+                    var openVal = $(this).find('.checkout--order-summary__title').attr('data-open-content');
+                    $(this).find('.checkout--order-summary__title').text(openVal);
                     $(this).closest('.checkout--order-summary').find('.order-summary-show-hide-block').fadeIn(300);
-                    $(this).find('.checkout--order-summary__amount').fadeOut(50);
                 }else{
-                    $(this).find('.checkout--order-summary__title').text('Show Order Summary');
+                    var closeVal = $(this).find('.checkout--order-summary__title').attr('data-close-content');
+                    $(this).find('.checkout--order-summary__title').text(closeVal);
                     $(this).closest('.checkout--order-summary').find('.order-summary-show-hide-block').fadeOut(300);
-                    $(this).find('.checkout--order-summary__amount').fadeIn(50);
                 }
                 
             })

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Signup</title>
     <?php include('../includes/header-imports.php') ?>
 </head>
 <body>
@@ -15,17 +15,7 @@
     <main>
 
     <div class="login">
-            <div class="container">
-                
-                <div class="row no-gutters">
-                    <div class="col-12 col-lg-6">
-                        <div class="checkout--logo">
-                                <a href="#" >
-                                    <img src="<?php echo $imagesurl ?>header/wakefit-logo.png" alt="logo">
-                                </a>
-                        </div>
-                    </div>
-                </div>   
+            <div class="container">  
 
                 <div class="row">
                     <div class="col-12 col-lg-4 offset-lg-4">
@@ -34,21 +24,21 @@
 
                             <h2 class="text-center login--heading">Create An Account</h2>
                                 <form action="">
-                                   <div class="create-account-form--half-fields"> 
-                                    <span class="checkout--shipping-details__form-field create-account-form--half-field">
-                                            <label for="login-first-name">First Name</label>
-                                            <input id="login-first-name" type="text">
-                                        </span>
-                                        <span class="checkout--shipping-details__form-field create-account-form--half-field">
-                                            <label for="login-last-name">Last Name</label>
-                                            <input id="login-last-name" type="text">
-                                        </span>
+                                   <div class="signup-form"> 
+                                    <span class="create-account-form--half-field animated-placeholder">
+                                        <label for="login-first-name">First Name</label>
+                                        <input id="login-first-name" type="text">
+                                    </span>
+                                    <span class="create-account-form--half-field animated-placeholder">
+                                        <label for="login-last-name">Last Name</label>
+                                        <input id="login-last-name" type="text">
+                                    </span>
                                     </div>
-                                    <span class="checkout--shipping-details__form-field">
+                                    <span class="create-account-form--field animated-placeholder">
                                         <label for="login-email">Email</label>
                                         <input id="login-email" type="text">
                                     </span>
-                                    <span class="checkout--shipping-details__form-field">
+                                    <span class="create-account-form--field animated-placeholder">
                                         <label for="login-password">Password</label>
                                         <input id="login-password" type="password">
                                     </span>
@@ -60,6 +50,12 @@
                                 <div class="login--signin-otp text-center">
                                   Already have an account <a href="#">Sign In</a>
                                 </div>
+                                <div class="signup-bottom text-center">
+                                    <img class="mw-100" src="<?php echo $imagesurl; ?>handshake-icon.png" alt="amazon">
+                                    <p>Your login information is used to allow you to sign in securely and access your data.</p>
+                                    <a href="#">Learn how Wakefit protects your privacy.</a>
+                                </div>
+                                
                                
                     </div>   
                 </div>
@@ -74,7 +70,7 @@
 
     </main>
     <!-- website footer[start] -->
-    <?php include('../components/shared/footer.php') ?>
+    <?php // include('../components/shared/footer.php') ?>
     <!-- website footer[end] -->
     <!-- scripts[start] -->
     <?php include('../includes/bottom-scripts.php') ?> 

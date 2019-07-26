@@ -16,7 +16,19 @@
                 padding: 35px 45px;
                 background: $color_lightblue;
                 margin-bottom: 5px;
-
+                position: relative;
+                &:after {
+                    content:'';
+                    position: absolute;
+                    left: 45px;
+                    bottom: 0;
+                    width: 88%;
+                    height: 1px;
+                    background: rgba(0,0,0,0.1);
+                }
+                &:first-child:after,&:last-child:after,&.active:after {
+                    width: 0;
+                }
                 h3 {
                     font-size: 18px;
                     line-height: 18px;
@@ -55,9 +67,13 @@
 
     &--slider {
         padding-bottom: 40px;
+        overflow: visible;
 
+        .swiper-container {
+            height: auto;
+        }
         .swiper-slide {
-            padding: 12px;
+            padding: 12px 0;
             border-radius: 5px;
         }
 

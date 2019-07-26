@@ -260,10 +260,13 @@ ul {
     }
 }
 
-.animated-placeholder label {
-    position: absolute;
-    top: 15px;
-    left: 20px;
+.animated-placeholder {
+    position: relative;
+    label {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+    }
 }
 
 label {

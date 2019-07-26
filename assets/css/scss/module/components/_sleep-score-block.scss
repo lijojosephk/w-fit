@@ -2,16 +2,88 @@
     padding-bottom: 50px;
 
     @include media-lg-min {
-        padding-bottom: 0;
-        background: $color_lightblue;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background: $color_white;
 
-        .container {
+        .container-fluid {
             width: 100%;
             max-width: 100%;
+            padding: 0;
+        }
+    }
+    @include media-lg-max {
+        padding-left: 0 !important;
+    }
+}
+.sleep-score-banner-wrap {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    .swiper-pagination {
+        bottom: 0;
+        @include media-lg-min {
+            bottom: 15px;
+        }
+    }
+    .swiper-button-prev {
+        left: unset;
+        right: 220px;
+        bottom: 0;
+        top: unset;
+        margin-top: 0px;
+        width: 50px;
+        height: 50px;
+        background: url(#{$img_url}reveiw-block/prev-button.png) center center no-repeat;
+        transition: all 0.3s ease;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    .swiper-button-next {
+        left: unset;
+        right: 170px;
+        bottom: 0;
+        top: unset;
+        margin-top: 0px;
+        width: 50px;
+        height: 50px;
+        background: url(#{$img_url}reveiw-block/next-button.png) center center no-repeat;
+        transition: all 0.3s ease;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+
+    @include media-lg-min {
+        padding-top: 0;
+        padding-bottom: 80px;
+    }
+
+    @include media-xxl-min {
+        .swiper-button-prev {
+            right: 200px;
+        }
+        .swiper-button-next {
+            right: 150px;
+        }
+    }
+
+    @include media-hd-min {
+        .swiper-button-prev {
+            right: 15.5%;
+        }
+        .swiper-button-next {
+            right: 12%;
+        }
+    }
+
+    .swiper-slide {
+        @include media-lg-min {
+            width:34%;
         }
     }
 }
-
 .sleep-score-banner {
     height: 70vh;
     background: url(#{$img_url}sleep-score-block/banner-image.jpg) center center no-repeat;
@@ -23,17 +95,6 @@
         background: url(#{$img_url}sleep-score-block/banner-image-desk.jpg) center center no-repeat;
         background-size: cover;
         border-radius: 0;
-    }
-
-    &-wrap {
-        padding-top: 35px;
-        padding-bottom: 35px;
-
-        @include media-lg-min {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-
     }
 
     &--title h4 {

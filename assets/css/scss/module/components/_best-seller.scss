@@ -1,7 +1,9 @@
 .best-seller {
     background: $color_lightblue;
     padding: 60px 0;
-
+    @include media-lg-min {
+        background: $color_white;
+    }
     &--title h3 {
         font-size: 28px;
         line-height: 34px;
@@ -14,7 +16,7 @@
     &--each {
         padding-top: 65px;
         h2 {
-            padding-top: 5px;
+            padding-top: 25px;
             font-size: 22px;
             line-height: 24px;
             font-weight: 500;
@@ -30,6 +32,9 @@
         }
         &:first-child {
             padding-top: 0;
+            @include media-lg-min {
+                padding-top: 65px;
+            }
         }
     }
 }

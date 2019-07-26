@@ -1,4 +1,19 @@
 .login{
+    form {
+        .button-block button {
+            padding: 15px 30px;
+            border-radius: 5px;
+            color: $color_white;
+            background: rgba(2,2,150,1);
+            background: -moz-linear-gradient(left, rgba(2,2,150,1) 0%, rgba(91,52,155,1) 100%);
+            background: -webkit-gradient(left, right, color-stop(0%, rgba(2,2,150,1)), color-stop(100%, rgba(12,52,157,1)));
+            background: -webkit-linear-gradient(left, rgba(2,2,150,1) 0%, rgba(91,52,155,1) 100%);
+            background: -o-linear-gradient(left, rgba(2,2,150,1) 0%, rgba(91,52,155,1) 100%);
+            background: -ms-linear-gradient(left, rgba(2,2,150,1) 0%, rgba(91,52,155,1) 100%);
+            background: linear-gradient(to right, rgba(2,2,150,1) 0%, rgba(91,52,155,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020296', endColorstr='#5c349d', GradientType=0 );
+        }
+    }
     &--heading{
         font-size: 22px;
         line-height: 30px;
@@ -30,8 +45,35 @@
         }
 
     }
+    &--forgot-password {
+        line-height: 45px;
+        padding: 25px 0 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        color: $color_grey;
+        font-size: 14px;
+        a{
+            color:$color_main;
+            text-decoration: underline;
+
+        }
+    }
+    &--signup {
+        margin-bottom: 60px;
+        p {
+            color: $color_grey;
+            font-size: 14px;
+        }
+        a{
+            font-size: 14px;
+            color:$color_main;
+            text-decoration: underline;
+
+        }
+    }
 
 }
+
 .login-social{
     background: #F7F7F7; /*$color_lightest_grey*/
     padding:45px 0;
@@ -73,9 +115,13 @@
     &--half-field{
         width:48%;
         display:inline-block;
+        position: relative;
         &:last-child{
             left:2.5%;
         }
 
+    }
+    &--field {
+        width: 100%;
     }
 }

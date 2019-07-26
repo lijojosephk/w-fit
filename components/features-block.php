@@ -1,4 +1,6 @@
-
+<div class="features-block-title d-none display-lg-block text-center">
+    <h3>Wakefit Guarantee</h3>
+</div>
 <div class="features-block text-center accordian-block">
     <div class="container">
         <div class="row d-block display-lg-none">

@@ -1,20 +1,51 @@
+.review-block-title {
+    h3 {
+        font-size: 28px;
+        line-height: 34px;
+        color: $color_main;
+        font-weight: 500;
+        padding-bottom: 20px;
+        padding-top: 60px;
+        font-family: $title_font;
+    }
+    p {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400;
+        color: $color_black;
+        padding-bottom: 60px;
+        span {
+            width: 100%;
+        }
+    }
+}
 .review-block {
     padding: 45px 0;
     background: $color_lightblue;
     position: relative;
-
     @include media-lg-min {
         background: transparent;
-
-        &:after {
-            content: '';
-            position: absolute;
-            width: 90%;
-            height: 100%;
-            left: 5%;
-            top: 0%;
-            z-index: -1;
-            background: $color_lightblue;
+        // &:after {
+            // content: '';
+            // position: absolute;
+            // width: 90%;
+            // height: 100%;
+            // left: 5%;
+            // top: 0%;
+            // z-index: -1;
+            // background: $color_lightblue;
+        // }
+    }
+    .bg-color-placer {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 700px;
+        background: $color_lightblue;
+    }
+    &--customer-review {
+        @include media-lg-min {
+            padding-left: 50px;
         }
     }
 
@@ -22,22 +53,18 @@
         @include media-lg-min {
             display: inline-block;
         }
-
-        &--points p {
+        &--points p{
             font-size: 37px;
             line-height: 37px;
             font-weight: 600;
             color: $color_black;
         }
-
         &--review-star {
             padding-top: 5px;
-
             &--stars {
                 font-size: 17px;
                 color: $color_yellow;
             }
-
             &--total-reviews {
                 font-size: 12px;
                 line-height: 19px;
@@ -45,11 +72,9 @@
                 color: $color_black;
                 padding-left: 10px;
             }
-
             &--write-review-desk {
                 display: none;
             }
-
             &--write-review-desk a {
                 font-size: 12px;
                 line-height: 20px;
@@ -57,7 +82,6 @@
                 color: $color_main;
                 padding-top: 20px;
                 position: relative;
-
                 &:after {
                     content: '';
                     width: 100%;
@@ -70,7 +94,6 @@
             }
         }
     }
-
     &--text {
         h3 {
             font-size: 28px;
@@ -81,7 +104,6 @@
             padding-bottom: 15px;
             font-family: $title_font;
         }
-
         p {
             font-size: 12px;
             line-height: 21px;
@@ -91,15 +113,13 @@
             margin-left: 5%;
         }
     }
-
-    &--write-review-mob a {
+    &--write-review-mob a{
         font-size: 12px;
         line-height: 20px;
         font-weight: 400;
         color: $color_main;
         padding-top: 20px;
         position: relative;
-
         &:after {
             content: '';
             width: 100%;
@@ -110,17 +130,14 @@
             bottom: 0;
         }
     }
-
     &--slider {
         margin-top: 35px;
         padding-bottom: 10px;
-
         @include media-lg-min {
             padding-bottom: 80px;
-
             .swiper-button-prev {
                 left: unset;
-                right: 150px;
+                right: 220px;
                 bottom: 0;
                 top: unset;
                 margin-top: 0px;
@@ -128,15 +145,13 @@
                 height: 50px;
                 background: url(#{$img_url}reveiw-block/prev-button.png) center center no-repeat;
                 transition: all 0.3s ease;
-
                 &:hover {
                     opacity: 0.5;
                 }
             }
-
             .swiper-button-next {
                 left: unset;
-                right: 100px;
+                right: 170px;
                 bottom: 0;
                 top: unset;
                 margin-top: 0px;
@@ -144,13 +159,28 @@
                 height: 50px;
                 background: url(#{$img_url}reveiw-block/next-button.png) center center no-repeat;
                 transition: all 0.3s ease;
-
                 &:hover {
                     opacity: 0.5;
                 }
             }
         }
+        @include media-xxl-min {
+            .swiper-button-prev {
+                right: 200px;
+            }
+            .swiper-button-next {
+                right: 150px;
+            }
+        }
 
+        @include media-hd-min {
+            .swiper-button-prev {
+                right: 15.5%;
+            }
+            .swiper-button-next {
+                right: 12%;
+            }
+        }
         .swiper-slide {
             width: 80%;
             display: flex;
@@ -159,6 +189,9 @@
             @include media-lg-min {
                 width: 38%;
             }
+            @include media-xxl-min {
+                width: 28%;
+            }
         }
 
         &--each {
@@ -166,20 +199,17 @@
             background: $color_white;
             padding: 40px;
             border-radius: 6px;
-
             &--name {
                 h3 {
                     font-size: 14px;
                     line-height: 16px;
                     font-weight: 600;
                     color: $color_black;
-
                     @include media-lg-min {
                         padding-top: 30px;
                     }
                 }
             }
-
             &--rating {
                 svg {
                     font-size: 12px;
@@ -189,11 +219,9 @@
 
             &--desc {
                 padding-top: 35px;
-
                 @include media-lg-min {
                     padding-top: 15px;
                 }
-
                 p {
                     font-size: 12px;
                     line-height: 20px;
@@ -226,10 +254,10 @@
         @include media-lg-min {
             display: inline-block;
             margin-top: 0;
+            margin-left: 50px;
             position: relative;
             z-index: 1;
             transform: translateY(-45px);
-
             a {
                 color: $color_main;
             }

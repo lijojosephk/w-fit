@@ -7,27 +7,22 @@
 </head>
 <body>
     <!-- website header[start] -->
-    <?php //include('../components/shared/header.php') ?> 
+    <?php include('../components/shared/header-account.php') ?> 
     <!-- website header[end] -->
     <!-- common loader[start] -->
     <?php include('../components/shared/loader.php') ?>
     <!-- common loader[end] -->
     <main>
 
-    <div class="checkout">
+    <div class="checkout payment-page">
             <div class="container">
                 <div class="row no-gutters">
-                    <div class="col-12 col-lg-6">
-                        <div class="checkout--logo">
-                            <a href="#" >
-                                <img src="<?php echo $imagesurl ?>header/wakefit-logo.png" alt="logo">
-                            </a>
-                        </div>
+                    <div class="col-12 offset-lg-1 col-lg-6 order-lg-2">  
                         <div class="checkout--order-summary">
                             <div class="order-summary-show-hide-trigger">
                                 <div class="row no-gutters">
                                     <div class="col-8">
-                                        <h4 class="checkout--order-summary__title">Show Order Summary</h4>
+                                        <h4 class="checkout--order-summary__title" data-open-content="Hide Order Summary" data-close-content="Show Order Summary">Show Order Summary</h4>
                                     </div>
                                     <div class="col-4">
                                         <div class="text-right">
@@ -106,7 +101,7 @@
                             <div class="order-summary-show-hide-trigger">
                                 <div class="row no-gutters">
                                     <div class="col-8">
-                                        <h4 class="checkout--order-summary__title">Show Shipment Summary</h4>
+                                        <h4 class="checkout--order-summary__title" data-open-content="Hide Shipment Summary" data-close-content="Show Shipment Summary">Show Shipment Summary</h4>
                                     </div>
                                     <div class="col-4">
                                         <div class="text-right">
@@ -142,65 +137,140 @@
                         </div>
 
                     </div>
-                </div>
-                <!-- Select Payment -->
-                <form action="">
-                <div class="row no-gutters">
-                    <div class="col-12 col-lg-6">
-                     <h2 class="shipment-summary--title select-payament--title-margin">Select Payment</h2>
-                     
-                        <ul class="select-payament">
-                            <li>
-                                <div class="v-center">
-                                    <div class="row no-gutters">
-                                        <div class="col-12">
-                                            <input type="radio" id="wallet-option" name="selector" checked>
-                                            <label for="wallet-option">Wallets</label>
-                                            <div class="check"><div class="inside"></div></div>
-                                        </div>
+                
+                    <div class="col-12 col-lg-5 order-lg-1">
+                        <!-- Select Payment -->
+                        <form action="">
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                <h2 class="shipment-summary--title select-payament--title-margin">Select Payment</h2>
+                                
+                                    <ul class="select-payament">
+                                        <li>
+                                            <div class="v-center">
+                                                <div class="row no-gutters">
+                                                    <div class="col-12">
+                                                        <input type="radio" id="cards-option" name="selector">
+                                                        <label for="cards-option" class="line-height-hook">Netbanking/Debit/Credit Cards</label>
+                                                        <span>Visa, Master Card, Amex and more</span>
+                                                        <div class="check"><div class="inside"></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>                                 
+                                        </li>
+                                        <li>
+                                            <div class="v-center">
+                                                <div class="row no-gutters">
+                                                    <div class="col-12">
+                                                        <input type="radio" id="wallet-option" name="selector" checked>
+                                                        <label for="wallet-option" class="line-height-hook">Wallets</label>
+                                                        <span>PayTm, Google Pay, BHIM UPI, Phone Pe</span>
+                                                        <div class="check"><div class="inside"></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                        </li>    
+                                        <li>
+                                            <div class="v-center">
+                                                <div class="row no-gutters">
+                                                    <div class="col-12">
+                                                        <input type="radio" id="cod-option" name="selector">
+                                                        <label for="cod-option" class="line-height-hook">COD</label>
+                                                        <span>COD will be available from 3rd July</span>
+                                                        <div class="check"><div class="inside"></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row no-gutters ">
+                                <div class="col-12 col-lg-6">
+                                    <h2 class="shipment-summary--title select-payament--title-margin">Billing Details</h2>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="sameAsShipping" checked>
+                                        <label for="sameAsShipping">Same As Shipping Address</label>
                                     </div>
-                                </div>   
-                            </li>
-                            <li>
-                                <div class="v-center">
-                                    <div class="row no-gutters">
-                                        <div class="col-12">
-                                            <input type="radio" id="cards-option" name="selector">
-                                            <label for="cards-option" class="line-height-hook">Debit/Credit Cards</label>
-                                            <span>Visa, Master Card, Amex and more</span>
-                                            <div class="check"><div class="inside"></div></div>
-                                        </div>
+                                </div>
+                                <div class="col-12">
+
+                                    <div class="checkout--shipping-details d-none display-lg-block">
+                                        <span class="checkout--shipping-details__form-field animated-placeholder">
+                                            <label for="">First Name</label>
+                                            <input type="text">
+                                        </span>
+                                        <span class="checkout--shipping-details__form-field animated-placeholder">
+                                            <label for="">Last Name</label>
+                                            <input type="text">
+                                        </span>
+                                        <span class="checkout--shipping-details__form-field animated-placeholder">
+                                            <label for="">Address Line 1</label>
+                                            <input type="text">
+                                        </span>
+                                        <span class="checkout--shipping-details__form-field animated-placeholder">
+                                            <label for="">Address Line 2</label>
+                                            <input type="text">
+                                        </span>
+                                        <span class="checkout--shipping-details__form-field select-box">
+                                            <!-- <label for="">City</label> -->
+                                            <select name="" id="" class="custom-select-box">
+                                                <option value="_">City</option>
+                                                <option value="Delhi">Delhi</option>
+                                                <option value="Agra">Agra</option>
+                                            </select>
+                                        </span>
+                                        <span class="checkout--shipping-details__form-field animated-placeholder">
+                                            <!-- <label for="">State</label> -->
+                                            <select name="" id="" class="custom-select-box">
+                                                <option value="State">State</option>
+                                            </select>
+                                        </span>
+                                        <span class="checkout--shipping-details__form-field animated-placeholder">
+                                            <label for="">Pincode</label>
+                                            <input type="text">
+                                        </span>
+                                        <span class="checkout--shipping-details__form-field animated-placeholder">
+                                            <!-- <label for="">Country</label> -->
+                                            <select name="" id="" class="custom-select-box">
+                                                <option value="country">country</option>
+                                            </select>
+                                        </span>
                                     </div>
-                                </div>                                 
-                            </li>
-                            <li>
-                                <div class="v-center">
-                                    <div class="row no-gutters">
-                                        <div class="col-12">
-                                            <input type="radio" id="cod-option" name="selector">
-                                            <label for="cod-option">COD</label>
-                                            <div class="check"><div class="inside"></div></div>
-                                        </div>
+                                    <div class="checkout--shipping-details gst-block animated-placeholder">
+                                        <span class="checkout--shipping-details__form-field">
+                                            <label for="">GST Number(Optional)</label>
+                                            <input type="text">
+                                        </span>
                                     </div>
-                                </div>    
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row no-gutters ">
-                    <div class="col-12 col-lg-6">
-                      <h2 class="shipment-summary--title select-payament--title-margin">Billing Details</h2>
-                        <div class="form-group">
-                                <input type="checkbox" id="sameAsShipping" checked>
-                                <label for="sameAsShipping">Same As Shipping Address</label>
-                        </div>
-                      <button type="submit" class="checkout--checkout-button payment-margins--bottom-25">Continue Payement</button>
-                    </div>
-                </div>
+                                
 
 
+                                    <button type="submit" class="checkout--checkout-button payment-margins--bottom-25">Continue Payement</button>
+                                </div>
+                            </div>
+                        </form>
 
-            </form>
+                        <!-- <div class="checkout--wakefit-guarantee d-none display-lg-block">
+                            <h5 class="checkout--wakefit-guarantee__title">Wakefit Mattress Guarantee</h5>
+                            <h6 class="checkout--wakefit-guarantee__sub-title">Every mattress comes with</h6>
+                            <ul class="checkout--wakefit-guarantee--list">
+                                <li class="checkout--wakefit-guarantee--list__item">
+                                    <h5 class="big-text">100 Nights Free</h5>
+                                    <h6 class="small-text">Risk-free returns</h6>
+                                </li>
+                                <li class="checkout--wakefit-guarantee--list__item">
+                                    <h5 class="big-text">10 Years Warranty</h5>
+                                    <h6 class="small-text">Best in India</h6>
+                                </li>
+                                <li class="checkout--wakefit-guarantee--list__item">
+                                    <h5 class="big-text">Free Shipping</h5>
+                                    <h6 class="small-text">Free door step delivery</h6>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>    
+                </div>    
 
 
 

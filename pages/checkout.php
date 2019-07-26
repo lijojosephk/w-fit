@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- website header[start] -->
-    <?php include('../components/shared/header.php') ?> 
+    <?php include('../components/shared/header-account.php') ?> 
     <!-- website header[end] -->
     <!-- common loader[start] -->
     <?php include('../components/shared/loader.php') ?>
@@ -17,13 +17,6 @@
         <div class="checkout">
             <div class="container">
                 <div class="row no-gutters">
-                    <div class="col-12">
-                        <div class="checkout--logo">
-                            <a href="#" >
-                                <img src="<?php echo $imagesurl ?>header/wakefit-logo.png" alt="logo">
-                            </a>
-                        </div>
-                    </div>
 
                     <div class="col-12 col-lg-6 order-lg-2">
                         <div class="checkout--order-summary">
@@ -207,7 +200,7 @@
         </div>
     </main>
     <!-- website footer[start] -->
-    <?php include('../components/shared/footer.php') ?>
+    <?php //include('../components/shared/footer.php') ?>
     <!-- website footer[end] -->
     <!-- scripts[start] -->
     <?php include('../includes/bottom-scripts.php') ?> 

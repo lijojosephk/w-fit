@@ -2,15 +2,15 @@
     // local [gokul]
 
     global $compurl;
-    $siteurl = 'http://192.168.0.11/w-fit/';
-    $assetsurl = 'http://192.168.0.11/w-fit/assets/';
-    $imagesurl = 'http://192.168.0.11/w-fit/assets/images/';
-    $compurl = 'http://192.168.0.11/w-fit/components/';
+    // $siteurl = 'http://192.168.0.11/w-fit/';
+    // $assetsurl = 'http://192.168.0.11/w-fit/assets/';
+    // $imagesurl = 'http://192.168.0.11/w-fit/assets/images/';
+    // $compurl = 'http://192.168.0.11/w-fit/components/';
 
-    $siteurl = 'http://localhost/w-fit/';
-    $assetsurl = 'http://localhost/w-fit/assets/';
-    $imagesurl = 'http://localhost/w-fit/assets/images/';
-    $compurl = 'http://localhost/w-fit/components/';
+    $siteurl = 'http://localhost/html/w-fit/';
+    $assetsurl = 'http://localhost/html/w-fit/assets/';
+    $imagesurl = 'http://localhost/html/w-fit/assets/images/';
+    $compurl = 'http://localhost/html/w-fit/components/';
     
     // ::: ip :::
     // $siteurl = 'http://gokul.pixelglimpse.com/demo/wakefit/';

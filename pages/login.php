@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- website header[start] -->
-    <?php include('../components/shared/header.php') ?> 
+    <?php include('../components/shared/header-account.php') ?> 
     <!-- website header[end] -->
     <!-- common loader[start] -->
     <?php include('../components/shared/loader.php') ?>
@@ -15,20 +15,36 @@
     <main>
 
     <div class="login">
-            <div class="container">
-                
-                <div class="row no-gutters">
-                    <div class="col-12 col-lg-6">
-                        <div class="checkout--logo">
-                                <a href="#" >
-                                    <img src="<?php echo $imagesurl ?>header/wakefit-logo.png" alt="logo">
-                                </a>
-                        </div>
-                    </div>
-                </div>   
+            <div class="container">   
 
                 <div class="row">
                     <div class="col-12 col-lg-4 offset-lg-4">
+
+                    <!-- Login -->    
+                    <section class="login">
+                            <h2 class="text-center login--heading">Login with password</h2>
+                            <form action="">
+                                <span class="checkout--shipping-details__form-field">
+                                    <label for="">Email</label>
+                                    <input type="text">
+                                </span>
+                                <span class="checkout--shipping-details__form-field">
+                                    <label for="">Password</label>
+                                    <input type="password">
+                                </span>
+                                <div class="button-block">
+                                    <button type="submit" class="main-button w-100 login--signin-button">SIGN IN</button>
+                                </div>
+                            </form>
+                            <!-- Sign in with OTP --> 
+                            <div class="login--forgot-password text-center">
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                            <div class="login--signup text-center">
+                                <p>Don't have an account?</p>
+                                <a href="#">Create yours now</a>
+                            </div>
+                        </section>
 
                       <!-- Login with password -->    
                        <section class="login-with-password" style="display:none;">
@@ -58,7 +74,7 @@
                        </section>
 
                        <!-- Login with OTP -->    
-                      <section class="login-with-otp">
+                      <section class="login-with-otp" style="display:none;">
                             <h2 class="text-center login--heading">Login with OTP</h2>
                                 <form action="">
                                     <span class="checkout--shipping-details__form-field">
@@ -93,7 +109,7 @@
      </div>
 
      <!-- Login options -->
-     <div class="login-social">
+     <div class="login-social" style="display:none;">
         <div class="container">
          
             <div class="row">
@@ -122,7 +138,7 @@
 
     </main>
     <!-- website footer[start] -->
-    <?php include('../components/shared/footer.php') ?>
+    <?php //include('../components/shared/footer.php') ?>
     <!-- website footer[end] -->
     <!-- scripts[start] -->
     <?php include('../includes/bottom-scripts.php') ?> 

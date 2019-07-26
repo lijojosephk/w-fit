@@ -31,7 +31,12 @@ jQuery(document).ready(function ($) {
         //-----------------------------------------------------------------
         function fullWidthLeftRightSpacing() {  
             // Padding for full width blocks
-            var widthDifference = (vW - $('.dummy div').width()) / 2;
+            
+            if(vW > 991) {
+                var widthDifference = (vW - $('.dummy div').outerWidth()) / 2;
+            } else {
+                var widthDifference = (vW - $('.dummy div').width()) / 2;
+            }
             $('.container-fluid-container-pad-right').css('padding-right', widthDifference);
             $('.container-fluid-container-pad-left').css('padding-left', widthDifference);
         }
@@ -164,6 +169,23 @@ jQuery(document).ready(function ($) {
 
             });
         }
+
+
+        //-----------------------------------------------------------------
+
+        // OTHER PRODUCTS DESKTOP SLIDER INITIALIZATION
+
+        //-----------------------------------------------------------------
+        function otherProductsSlider() {  
+            var mySwiper = new Swiper('.swiper-container.other-products-block--slider', {
+                slidesPerView: 'auto',
+                speed: 400,
+                spaceBetween: 0,
+                loop: true,
+                
+            });
+        }
+
 
 
         //-----------------------------------------------------------------
@@ -457,6 +479,15 @@ jQuery(document).ready(function ($) {
             setTimeout(() => {
                 //Common Swiper Initialization
                 commonSwiper();
+
+                // Other Product Slider Init
+                if (vW > 991) {
+                    if($('.other-products-block--slider').length){
+                        
+                    //OTHER PRODUCTS SLIDER FOR DESKTOP
+                    otherProductsSlider();
+                    }    
+                }    
             }, 1000);
 
             setTimeout(() => {
@@ -503,6 +534,7 @@ jQuery(document).ready(function ($) {
 
             // CUSTOM SELECT BOX INITIALIZATION
             customSelectbox();
+
 
         }); // DOCUMENT READY ENDS
 

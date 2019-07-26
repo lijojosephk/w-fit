@@ -62,6 +62,12 @@ jQuery(document).ready(function ($) {
                         
                     })
                 } 
+                if($('.news-block').length) {
+                    $('.news-block').find('.container-fluid').addClass('container').removeClass('container-fluid');
+                }
+                if($('.sleep-score-block ').length) {
+                    $('.sleep-score-block ').find('.container').addClass('container-fluid').removeClass('container');
+                }
             }
 
             //-----------------------------------------------------------------
@@ -74,6 +80,12 @@ jQuery(document).ready(function ($) {
                 var sectionBgImg = $(this).attr('data-sectionBgImg');
                 $(this).css('background-image','url('+sectionBgImg+')');
             });
+
+            // Review Block BG Color Placer
+            var width = $('.review-block .container').innerWidth();
+                var widthDifference = (vW - width) / 2;
+                $('.review-block .bg-color-placer').width(width);
+                $('.review-block .bg-color-placer').css('left', widthDifference);
             
         }); // DOCUMENT READY ENDS
 

@@ -1,0 +1,24 @@
+.signup-bottom {
+    padding: 50px 25px;
+    p {
+        font-size: 12px;
+        line-height: 19px; 
+        color: $color_lightgrey;
+        padding-top: 10px;
+    }
+    a {
+        font-size: 12px;
+        line-height: 19px; 
+        color: $color_main;;
+        text-decoration: underline;
+    }
+}
+
+.create-account-form--field {
+    // width: 100%;
+}
+
+.create-account-form--field, .create-account-form--half-field {
+    margin-bottom: 20px;
+}
+  

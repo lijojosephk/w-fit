@@ -86,6 +86,42 @@
             p:nth-child(5) {
                 margin-top: 42px;
             }
+            @include media-xxl-min {
+                p:nth-child(1) {
+                    margin-top: 73px;
+                }
+                p:nth-child(2) {
+                    margin-top: 55px;
+                }
+                p:nth-child(3) {
+                    margin-top: 60px;
+                }
+                p:nth-child(4) {
+                    margin-top: 40px;
+                }
+                p:nth-child(5) {
+                    margin-top: 60px;
+                }
+            }
+
+            @include media-hd-min {
+                p:nth-child(1) {
+                    margin-top: 95px;
+                }
+                p:nth-child(2) {
+                    margin-top: 60px;
+                }
+                p:nth-child(3) {
+                    margin-top: 60px;
+                }
+                p:nth-child(4) {
+                    margin-top: 60px;
+                }
+                p:nth-child(5) {
+                    margin-top: 80px;
+                }
+            }
+            
         }
     }
 }

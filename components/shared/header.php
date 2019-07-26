@@ -192,11 +192,11 @@
 </div>
 
 <!-- Cart Section -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/w-fit/components/cart.php') ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/html/w-fit/components/cart.php') ?>
 <!-- Know Mattress Size Popup Block -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/w-fit/components/know-mattress-size-popup-block.php') ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/html/w-fit/components/know-mattress-size-popup-block.php') ?>
 <!-- Sleep Score Calculator Popup Block -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/w-fit/components/sleep-score-calculator-popup.php') ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/html/w-fit/components/sleep-score-calculator-popup.php') ?>
 
 
 <div class="master-wrap">
