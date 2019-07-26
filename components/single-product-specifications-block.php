@@ -1,5 +1,5 @@
 <div class="single-product-specifications-block">
-    <div class="single-product-specifications-block--title">Spcifications</div>
+    <div class="single-product-specifications-block--title">Specifications</div>
     <div class="d-block display-lg-none">
         <div class="single-product-specifications-each">
             <div class="single-product-specifications-each--content text-left">

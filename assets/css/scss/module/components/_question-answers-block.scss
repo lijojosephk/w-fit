@@ -1,6 +1,10 @@
 .question-answers {
     &-block {
-        padding: 60px;
+        padding: 60px 15px;
+        @include media-lg-min {
+            padding: 60px;
+        }
+        
 
         &--title {
             font-size: 28px;

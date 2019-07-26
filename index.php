@@ -37,10 +37,21 @@
         <?php include('./components/design-block.php') ?>
         <!-- Sleep Score Block -->
         <?php include('./components/sleep-score-block.php') ?>
-        <!-- News Block -->
-        <?php include('./components/news-block.php') ?>
-        <!-- Call To Action Block -->
-        <?php include('./components/call-to-action-block.php') ?>
+        
+        <div class="display-lg-none">
+            <!-- News Block -->
+            <?php include('./components/news-block.php') ?>
+        </div>
+
+        <div class="d-none display-lg-block">
+           <!-- News Block -->
+           <?php include('./components/other-products-block.php') ?>     
+        </div>
+        <div class="display-lg-none">
+            <!-- Call To Action Block -->
+            <?php include('./components/call-to-action-block.php') ?>
+        </div>
+        
         <!-- Why Wakefit Block -->
         <?php include('./components/why-wakefit-block.php') ?>
     </main>

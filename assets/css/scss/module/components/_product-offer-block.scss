@@ -31,6 +31,7 @@
         @include media-lg-min {
             font-size: 40px;
             line-height: 40px;
+            color: $color_main;
         }
         span {
             display: block;

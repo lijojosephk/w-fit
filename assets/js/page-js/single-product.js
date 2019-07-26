@@ -280,6 +280,12 @@ jQuery(document).ready(function ($) {
             }
         }
 
+        function containerContainerFluidClassRemoval() {
+            if($('.sleep-score-design-journey-whole ').length) {
+                $('.sleep-score-design-journey-whole ').find('.container').addClass('container-fluid').removeClass('container');
+            }
+        }
+
 
         // DOCUMENT READY STARTS
         $(document).ready(function () {
@@ -310,6 +316,8 @@ jQuery(document).ready(function ($) {
             singleProductSpecificationBlock();
 
             designBlock();
+
+            containerContainerFluidClassRemoval();
 
             
 
